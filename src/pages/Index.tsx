@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import HeroSection from '../components/HeroSection';
+import ProblemSection from '../components/ProblemSection';
+import SolutionSection from '../components/SolutionSection';
+import ScenarioSection from '../components/ScenarioSection';
+import FeaturesSection from '../components/FeaturesSection';
+import ValueSection from '../components/ValueSection';
+import PricingSection from '../components/PricingSection';
+import CTASection from '../components/CTASection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <ScenarioSection />
+      <FeaturesSection />
+      <ValueSection />
+      <PricingSection />
+      <CTASection />
     </div>
   );
 };
