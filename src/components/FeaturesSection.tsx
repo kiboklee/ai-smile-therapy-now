@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Brain, Video, BarChart3, Heart } from 'lucide-react';
 
-const Feat거esSection = () => {
+const FeaturesSection = () => {
   const features = [
     {
       icon: Brain,
