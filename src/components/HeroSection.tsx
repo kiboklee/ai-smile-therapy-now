@@ -2,6 +2,16 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Play, Sparkles } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 const HeroSection = () => {
   return (
@@ -59,6 +69,51 @@ const HeroSection = () => {
               <Play className="h-5 w-5 mr-2" />
               서비스 소개 영상 보기
             </Button>
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  회원가입하기
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold text-center bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+                    AI웃음연구소 가입하기
+                  </DialogTitle>
+                  <DialogDescription className="text-center text-gray-600">
+                    개인 맞춤형 감정 케어를 시작해보세요
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="space-y-4 py-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">이름</Label>
+                    <Input id="name" placeholder="홍길동" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">이메일</Label>
+                    <Input id="email" type="email" placeholder="example@email.com" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="password">비밀번호</Label>
+                    <Input id="password" type="password" placeholder="8자 이상 입력해주세요" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">전화번호</Label>
+                    <Input id="phone" placeholder="010-1234-5678" />
+                  </div>
+                  <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-3 rounded-lg">
+                    가입 완료하기
+                  </Button>
+                  <p className="text-xs text-gray-500 text-center">
+                    가입 시 <span className="text-purple-600">이용약관</span> 및 <span className="text-purple-600">개인정보처리방침</span>에 동의하게 됩니다.
+                  </p>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
 
