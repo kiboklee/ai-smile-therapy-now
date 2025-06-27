@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Play, Sparkles } from 'lucide-react';
@@ -16,6 +17,10 @@ const HeroSection = () => {
 
   const handleSignupSuccess = () => {
     setIsDialogOpen(false);
+  };
+
+  const handleExternalSignup = () => {
+    window.open('https://www.uppage.com/page/uppage/set/test1', '_blank');
   };
 
   return (
@@ -57,6 +62,17 @@ const HeroSection = () => {
             </p>
           </div>
 
+          {/* 메인 회원가입 버튼 */}
+          <div className="mb-8">
+            <Button 
+              onClick={handleExternalSignup}
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-12 py-6 text-xl rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            >
+              지금 바로 회원가입하기
+            </Button>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
@@ -80,7 +96,7 @@ const HeroSection = () => {
                   size="lg"
                   className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  회원가입하기
+                  간편 회원가입
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
